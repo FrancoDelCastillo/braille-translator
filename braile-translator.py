@@ -1,4 +1,4 @@
-def translate_to_braille():
+def translate_to_braille(space_station_sign):
 
     # base for braille alphabet
     a_through_j = [
@@ -33,37 +33,28 @@ def translate_to_braille():
     white_space = '000000'
     u_through_z.append(white_space)
 
-    braille_alphabet = []
-    braille_alphabet += a_through_j + k_through_t + u_through_z
+    # braille alphabet completed
+    braille_alphabet = a_through_j + k_through_t + u_through_z
 
-    print(braille_alphabet)
-    print(braille_alphabet[(99-97)])
+    translation = ''
 
-    example = 'Co de'
-    example_translation = []
-    cap_sign = '000001'
-
-    for c in example:
+    for c in space_station_sign:
 
         if(c.isupper()) == True:
-
             unicode_value = ord(c.lower())
             position = unicode_value - 97
-            example_translation.append(cap_sign)
-            example_translation.append(braille_alphabet[position])
-
+            cap_sign = '000001'
+            translation += cap_sign
+            translation += braille_alphabet[position]
         else:
             unicode_value = ord(c)
-            
             if unicode_value == 32:
                 white_space = '000000'
-                example_translation.append(braille_alphabet[-1])
+                translation += braille_alphabet[-1]
             else:
                 position = unicode_value - 97
-                example_translation.append(braille_alphabet[position])
+                translation += braille_alphabet[position]
 
-    print(example_translation)
+    return translation
                 
-translate_to_braille()
-
-
+print (translate_to_braille('Braille'))
