@@ -12,6 +12,7 @@ Braille is a writing system used to read by touch instead of by sight. Each char
 So given the plain text word "code", you get the Braille dots:
 
 c  o  d  e
+===================
 11 10 11 10
 
 00 01 01 01
