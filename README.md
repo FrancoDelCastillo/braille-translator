@@ -1,5 +1,3 @@
-Google's Foobar Challenge
-
 Braille Translation
 ===================
 
