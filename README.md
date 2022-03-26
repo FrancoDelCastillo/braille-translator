@@ -18,6 +18,7 @@ c  o  d  e
 00 01 01 01
 
 00 10 00 00
+===================
 
 where 1 represents a bump and 0 represents no bump. Put together, "code" becomes the output string "100100101010100110100010".
 
